@@ -1,0 +1,15 @@
+Algoritmo di Gauss
+
+1.  Chiedi all'utente l'anno ( y ), un numero intero non negativo.
+2.  Dividi y per 19, ottenendo il resto a. Ignora il quoziente.
+3.  Dividi y per 100, ottenendo quoziente b e resto c.
+4.  Dividi b per 4, ottenendo quoziente d e resto e.
+5.  Dividi (8b+13) per 25, ottenendo il quoziente g. Ignora il resto.
+6.  Dividi (19a+b-d-g+15) per 30, ottenendo il resto h. Ignora il quoziente.
+7.  Dividi c per 4, ottenendo quoziente j e resto k.
+8.  Dividi (a+11h) per 319, ottenendo il quoziente m. Ignora il resto.
+9.  Dividi (2e+2j-k-h+m+32) per 7, ottenendo il resto r. Ignora il quoziente.
+10. Dividi (h-m+r+90) per 25, ottenendo il quoziente n. Ignora il resto.
+11. Dividi (h-m+r+n+19) per 32, ottenendo il resto p. Ignora il quoziente.
+12. Pasqua è il giorno p del mese n dell'anno y.
+
