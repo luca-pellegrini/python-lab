@@ -14,7 +14,7 @@ Git is Free and Open Source Software (license: GNU GPL v2).
 Website: [https://git-scm.com/]()
 
 Unlike many version control systems, Git works with **snapshots**, not differences.
-This means that it does not track the difference between two versions of a file, but takes a picture of the current state of the project.
+This means that it does not track the difference between two versions of a file, but takes a snapshot of the current state of the project (the repository).
 
 This is why Git is very fast compared to other distributed VCSs; it is also why switching between versions and branches is so fast and easy.
 
