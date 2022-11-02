@@ -1,0 +1,1 @@
+# Inizializza le variabili
