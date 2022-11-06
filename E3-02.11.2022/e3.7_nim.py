@@ -6,14 +6,11 @@ while True : # ciclo che contiene tutto il programma
     print("Il mucchio iniziale contiene", BIGLIE_INIZ, "biglie")
     n_bi = BIGLIE_INIZ # variabile diminuisce nel corso della partita
     # Chi inizia?
-    x = randint(0, 1)
-    if x == 0 : 
+    if randint(0, 1) == 0 : 
         turno = 'C'
-        #COMPUTER_BEGINS = True
         print("Inizia il computer")
     else :
         turno = 'U'
-        #COMPUTER_BEGINS = False
         print("Inizia il giocatore umano")
     # Computer stupido o intelligente?
     y = randint(0, 1)
@@ -29,15 +26,11 @@ while True : # ciclo che contiene tutto il programma
         if turno == 'C' : # tocca al computer
             print("Biglie nel mucchio:", n_bi)
             if STUPID_MODE : # computer stupido
-                b_sottratte = randint(1, int(n_bi/2))
+                b_sottratte = randint(1, (n_bi//2))
                 print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
                 n_bi = n_bi - b_sottratte
             else : # computer intelligente
-                if n_bi == 3 or n_bi == 7 or n_bi == 15 or n_bi == 31 or n_bi == 63 :
-                    b_sottratte = randint(1, int(n_bi/2))
-                    print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
-                    n_bi = n_bi - b_sottratte
-                elif n_bi == 2 :
+                if n_bi == 2 :
                     b_sottratte = 1
                     print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
                     n_bi = n_bi - b_sottratte # 2-1 = 1
@@ -57,10 +50,14 @@ while True : # ciclo che contiene tutto il programma
                     b_sottratte = n_bi - 31
                     print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
                     n_bi = 31
-                else : # 63 < n_bi <= BIGLIE_INIZ (al max 100)
+                elif 63 < n_bi : # <= BIGLIE_INIZ (al max 100)
                     b_sottratte = n_bi - 63
                     print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
                     n_bi = 63
+                else : # n_bi == 3 or n_bi == 7 or n_bi == 15 or n_bi == 31 or n_bi == 63
+                    b_sottratte = randint(1, (n_bi//2))
+                    print("Computer sottrae", b_sottratte, "biglie dal mucchio.")
+                    n_bi = n_bi - b_sottratte
             turno = 'U'
         else : # turno == 'U' -> tocca all'umano
             print("Biglie nel mucchio:", n_bi)
