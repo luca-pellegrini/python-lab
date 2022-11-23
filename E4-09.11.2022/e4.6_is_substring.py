@@ -1,3 +1,5 @@
+# is_substring.py
+
 # Acquisisce le due stringhe in input
 print('Scrivi la prima stringa:')
 s1 = input()
