@@ -12,4 +12,3 @@ while i <= num :
         num = num // i
     i += 1
 print()
-

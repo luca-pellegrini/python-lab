@@ -27,4 +27,3 @@ else :
     print('Somma dei valori assoluti:', absSomma)
     print('Prodotto:', prodotto)
     print('Valore medio:', somma/n)
-
