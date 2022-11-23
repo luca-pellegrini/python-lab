@@ -172,33 +172,37 @@ def inputInteger(message) :
 # Restituisce il numero inserito solo se è un numero intero positivo
 # Utilizza la funzione `inputInteger`
 def inputPositiveInteger(message) :
-    num = inputInteger(message)
-    if num > 0 :
-        return num
+    while True:
+        num = inputInteger(message)
+        if num > 0 :
+            return num
 
 # Chiede all'utente di inserire un numero
 # Restituisce il numero inserito solo se è un numero intero negativo
 # Utilizza la funzione `inputInteger`
 def inputNegativeInteger(message) :
-    num = inputInteger(message)
-    if num < 0 :
-        return num
+    while True :
+        num = inputInteger(message)
+        if num < 0 :
+            return num
 
 # Chiede all'utente di inserire un numero
 # Restituisce il numero inserito solo se è un numero intero non positivo (<= 0)
 # Utilizza la funzione `inputInteger`
 def inputNonPositiveInteger(message) :
-    num = inputInteger(message)
-    if num <= 0 :
-        return num
+    while True :
+        num = inputInteger(message)
+        if num <= 0 :
+            return num
 
 # Chiede all'utente di inserire un numero
 # Restituisce il numero inserito solo se è un numero intero non negativo (>= 0)
 # Utilizza la funzione `inputInteger`
 def inputNonNegativeInteger(message) :
-    num = inputInteger(message)
-    if num >= 0 :
-        return num
+    while True :
+        num = inputInteger(message)
+        if num >= 0 :
+            return num
 
 # Chiede all'utente di inserire un numero
 # Restituisce il numero inserito solo se è un numero frazionario (float)
