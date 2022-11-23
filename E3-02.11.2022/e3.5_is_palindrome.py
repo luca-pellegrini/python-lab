@@ -17,3 +17,4 @@ if palindrome :
     print("La stringa è palindroma")
 else :
     print("La stringa non è palindroma")
+    

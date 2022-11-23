@@ -16,4 +16,3 @@ while i < len(S) :
 print()
 print("Risultato:")
 print(outS)
-

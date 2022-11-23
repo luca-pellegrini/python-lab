@@ -4,18 +4,25 @@ s1 = input()
 print('Scrivi la seconda stringa:')
 s2 = input()
 
-# Inizializza variabili Subseq e FoundCar
-Subseq = False
+# Inizializza variabili Subseq e Found
+Subseq = False # indicherà il risultato della verifica
 Found = 0
 
 # Verifica se s2 è sottosequenza di s1
+"""
+Se s2 è una stringa vuota, allora è sottosequenza di qualsiasi stringa s1
+Se s2 NON è vuota, ma s1 e s2 sono uguali (e quindi hanno stessa lunghezza), allora s2 è una sottosequenza
+Se s1 è più corta di s2 (len(s1) < len(s2)), è ovvio che s2 NON è una sua sottosequenza
+Se len(s1) > len(s2) > 0 (cioè nessuno dei casi precedenti), che implica che s1 non è una stringa vuota,
+allora procedo alla verifica: inizia il ciclo
+"""
 if s2 == '' :
     Subseq = True
-elif s1 == s2 : # len(s1) = len(s2)
+elif s1 == s2 :
     Subseq = True
-elif len(s1) < len(s2) : # se s1 è più corta di s2, è ovvio che s2 non può essere una sua sottosequenza
+elif len(s1) < len(s2) : 
     Subseq = False
-else : # quindi len(s1) > len(s2) > 0. Il caso s1 == '' (len(s1) = 0) è escluso
+else : # len(s1) > len(s2) > 0. Inizia il ciclo
     i = 0 # indice dei caratteri di s2
     x = 0 # indice di inizio della ricerca in s1
     while i < len(s2) : # cerco i caratteri di s2, uno alla volta

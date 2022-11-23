@@ -30,4 +30,3 @@ while base <= baseMax :
         esp += 1
     print()
     base += 1
-

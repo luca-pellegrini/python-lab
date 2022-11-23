@@ -20,4 +20,3 @@ while i <= maxValue : # ciclo che analizza ogni numero i <= maxValue per vedere 
         k += 1
     if isPrime : print(i) # visualizzo i solo se è primo
     i += 1
-
