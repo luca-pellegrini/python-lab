@@ -1,0 +1,116 @@
+# compitino1_esempio1_testo.py
+"""
+   Primo compitino di Elementi di Informatica e Programmazione - ESEMPIO
+
+   Copiare questo file in CognomeMatricola.py usando il proprio cognome
+   e il proprio numero di matricola. Se il cognome contiene spazi o apostrofo,
+   ignorarli; se contiene lettere accentate, usare la corrispondente lettera
+   non accentata.
+   
+   MODIFICARE SOLTANTO IL FILE CognomeMatricola.py !!!!!!!!
+   Quello sara' il file valutato per l'esame.
+
+   TEMPO A DISPOSIZIONE = 1 ora e mezza (90 minuti)
+   
+   Il progetto consiste nello sviluppo di alcune funzioni cooperanti tra loro,
+   ma la struttura della cooperazione (cioe' dell'interazione tra le funzioni)
+   e' gia' delineata.
+
+   Ciascuna funzione e' descritta nel commento che la precede, che a volte
+   contiene anche delle prescrizioni o dei divieti da seguire durante la
+   scrittura del codice (ad esempio, non si possono usare alcune specifiche funzioni...)
+   che valgono soltanto per la funzione a cui si riferisce il commento.
+   
+   Alcune sezioni di codice sono gia' presenti e non possono essere modificate!
+   Le sezioni di codice mancante e da scrivere sono identificate dal commento
+   # SCRIVERE QUI 
+"""
+def main() :
+   lst1 = createRandomIntegerList(30, 1, 10)
+   lst2 = list(lst1) # duplico la lista
+   lst1.sort()
+   removeFromSortedList(lst1)
+   removeFromUnsortedList(lst2)
+   if areEquals(lst1, lst2) :
+      print("Collaudo riuscito (ma non significa che non ci siano errori...)")
+   else :
+      print("Collaudo non riuscito")
+# SCRIVERE QUI
+   """
+   Qui si possono inserire altri eventuali collaudi (ma non e' necessario)
+   """
+# fine main
+     
+"""
+La funzione areEquals deve restituire True se e solo se le due liste di numeri ricevute
+come parametri hanno lo stesso contenuto, indipendentemente dall'ordinamento degli
+elementi (altrimenti, ovviamente, deve restituire False).
+Per essere dichiarate uguali, le due liste devono contenere gli stessi
+valori, ciascuno con la stessa molteplicita'.
+Esempio:  1 2 3 4 4 4 3   e   4 3 4 3 4 2 1  sono uguali.
+Esempio:  1 2   e   1 2 2  non sono uguali.
+Due liste vuote sono (ovviamente) uguali.
+La funzione non puo' modificare, neanche temporaneamente, il contenuto delle liste.
+La funzione ovviamente puo' utilizzare le funzioni definite nel seguito del testo
+(leggere tutto prima di iniziare a lavorare !!!!)
+"""
+def areEquals(lst1, lst2) :
+# SCRIVERE QUI
+   return True # riga da eliminare
+# fine areEquals
+   
+"""
+La funzione removeFromUnsortedList deve eliminare dalla lista ricevuta come parametro
+tutti e soli gli elementi che sono presenti in essa piu' di due volte,
+lasciando soltanto gli elementi che sono presenti una o due volte
+(gli elementi che sono presenti due volte dovranno essere presenti
+due volte anche alla fine della procedura).
+Gli elementi rimasti nella lista dovranno trovarsi nella stessa
+posizione relativa che avevano inizialmente (quindi, per semplificare
+le cose, e' decisamente preferibile evitare di ordinare la lista).
+Non possono essere create altre liste ne' altri contenitori.
+Con oggetti di tipo lista, l'unico metodo utilizzabile è remove
+(ovviamente si possono usare FUNZIONI che ricevono una lista, come len).
+"""
+def removeFromUnsortedList(a) :
+   """
+      Dovendo eliminare elementi dalla lista, suggerisco di non usare un ciclo for...
+   """
+# SCRIVERE QUI
+
+# fine removeFromUnsortedList
+   
+"""
+La funzione removeFromSortedList deve eliminare dalla lista ricevuta come parametro
+tutti e soli gli elementi che sono presenti in essa piu' di due volte,
+lasciando soltanto gli elementi che sono presenti una o due volte
+(gli elementi che sono presenti due volte dovranno essere presenti
+due volte anche alla fine della procedura).
+Con oggetti di tipo lista, l'unico metodo utilizzabile è pop
+(ovviamente si possono usare FUNZIONI che ricevono una lista, come len).
+La lista ricevuta e' ordinata (non c'e' bisogno di verificarlo)
+e deve essere ordinata anche al termine della procedura.
+Non possono essere create altre liste ne' altri contenitori.
+"""
+def removeFromSortedList(a) :
+   """
+      In una lista ordinata, eventuali elementi replicati
+      si trovano in posizioni tra loro consecutive.
+   """
+# SCRIVERE QUI
+
+# fine removeFromSortedList
+
+"""
+La funzione createRandomIntegerList deve creare e restituire una lista
+di lunghezza uguale al valore
+del primo parametro ricevuto e contenente numeri interi pseudocasuali
+appartenenti all'intervallo [a, b].
+"""
+from random import randint
+def createRandomIntegerList(size, a, b) :
+# SCRIVERE QUI
+   return [] # riga da eliminare
+# fine createRandomIntegerList
+   
+main()
