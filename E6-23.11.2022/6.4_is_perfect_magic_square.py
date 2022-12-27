@@ -11,7 +11,8 @@ def inputSequenceOfNumbers() :
     row = [ ]
     while i < len(s) :
         # "consuma" eventuali spazi
-        while i < len(s) and s[i] == " " : i += 1
+        while i < len(s) and s[i] == " " :
+            i += 1
         j = i # forse inizia un numero
         while i < len(s) and s[i].isdigit() :
                 i += 1 # "consuma" cifre
@@ -28,7 +29,7 @@ matrix = [ ]
 riga = inputSequenceOfNumbers()
 #print("DEBUG", riga)
 N = len(riga) # dimensioni del quadrato
-print("DEBUG: n =", N)
+#print("DEBUG: n =", N)
 matrix.append(riga)
 i = 1
 while i < N :
