@@ -1,7 +1,15 @@
+# Byte-compiled files
 __pycache__/
-prova*.txt
-prova*.md
-prova*.py
-test*.txt
-test*.md
-test*.py
+
+# File temporanei
+prova**
+test**
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
