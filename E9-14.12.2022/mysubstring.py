@@ -36,7 +36,7 @@ def get_all_substrings(s):
     return substrings
 """
 
-## Calcola numero di tutte le possibili sottostringhe
+## Calcola il numero di tutte le possibili sottostringhe
 #  di una stringa data, senza generarle
 #  @param s La stringa di partenza
 #
@@ -164,21 +164,30 @@ def get_all_subsequences(s):
         subseqs.append(sub)
     return subseqs
 
-## Converte un numero intero decimale in un intero in base 2
-#  @param n Numero intero in base 10
-#  @param min_lenght Minima lunghezza in bit del numero restituito (aggiunge zeri iniziali se necessario)
+## Converte un numero intero decimale in un numero in base 2
+#  @param num Numero intero in base 10
+#  @param min_lenght Minima lunghezza in bit del numero restituito 
+#  (aggiunge zeri iniziali se necessario)
 #  @return Stringa contenente il numero in base 2
 #
-def decimal_to_binary(n, min_lenght):
-    if not (isinstance(n, int()) and isinstance(min_lenght, int)):
+def decimal_to_binary(num, min_lenght):
+    if not (isinstance(num, int) and isinstance(min_lenght, int)):
         raise TypeError("both arguments must be of type int")
-    quoziente = n
+    quoziente = num
     bin = ""
     while quoziente > 0:
         resto = quoziente % 2
         quoziente = quoziente // 2
-        bin += str(resto)
+        bin = str(resto) + bin
     if len(bin) < min_lenght:
         for k in range(min_lenght - len(bin)):
             bin = "0" + bin
     return bin
+
+## Calcola il numero di tutte le possibili sottosequenze
+#  di una stringa data, senza generarle
+#  @param s La stringa di partenza
+#
+def num_subsequences(s):
+    return 2**(len(s))
+
